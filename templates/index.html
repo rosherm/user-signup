@@ -1,16 +1,17 @@
 {% extends "base.html" %}
 
         {% block content %}
-    
-        <form  action = "/welcome" method="post">
-                <table>
+
+  
+        <form name = "form"  action = "/error" method="post">
+                <table align="center">
                     <tr>
                         <td><label for="username">Username</label></td>
                         <td>
-                            <input name="username" type="text" value="">
-                            {% if error %}
+                            <input name="username" type="text" value="{{username}}">
+                            
                             <span class="error">{{error}}</span>
-                            {% endif %}
+                            
 
                         </td>
                     </tr>
@@ -18,27 +19,27 @@
                         <td><label for="password">Password</label></td>
                         <td>
                             <input name="password" type="password">
-                            {% if error %}
-                            <span class="error">{{error1}}</span>
-                            {% endif %}
+                         
+                            <span class="error1">{{error1}}</span>
+                          
                         </td>
                     </tr>
                     <tr>
                         <td><label for="verify">Verify Password</label></td>
                         <td>
                             <input name="verify" type="password">
-                            {% if error %}
-                            <span class="error">{{error2}}</span>
-                            {% endif %}
+                        
+                            <span class="error2">{{error2}}</span>
+                         
                         </td>
                     </tr>
                     <tr>
                         <td><label for="email">Email (optional)</label></td>
                         <td>
-                            <input name="email" value="">
-                            {% if error %}
-                            <span class="error">{{error3}}</span>
-                            {% endif %}
+                            <input name="email" value="{{email}}">
+                       
+                            <span class="error3">{{error3}}</span>
+                          
                         </td>
                     </tr>
                 </table>
